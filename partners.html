@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partners | B'more Scores in STEM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --blue: #4a9fd4; --blue-dark: #2a7ab8; --blue-deep: #1a5a8a;
+  --blue-light: #7ec4e8; --blue-pale: #dff0fb; --blue-bg: #eef7fd;
+  --ink: #1a2a3a; --ink-mid: #3a4a5a; --ink-light: #6a7a8a;
+  --white: #ffffff; --yellow: #f5c842; --yellow-light: #fdeea0;
+  --red-accent: #e85c45; --green-accent: #4caf7d;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Nunito Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; margin: 0; }
+.icon { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--blue-deep); padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; height: 70px; border-bottom: 3px solid var(--blue-dark); }
+.nav-logo img { height: 48px; display: block; filter: brightness(0) invert(1); }
+.nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
+.nav-links a { font-family: 'Nunito', sans-serif; font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.8); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--yellow); }
+.nav-cta { background: var(--yellow) !important; color: var(--ink) !important; padding: 8px 20px; border-radius: 999px; transition: transform 0.15s, background 0.2s !important; }
+.nav-cta:hover { background: #f0b800 !important; transform: scale(1.04); }
+
+/* PAGE HERO */
+.page-hero { margin-top: 70px; background: var(--blue-deep); padding: 5rem 5vw 4rem; position: relative; overflow: hidden; }
+.page-hero::after { content: ''; position: absolute; right: -100px; top: -100px; width: 400px; height: 400px; border-radius: 50%; background: var(--blue-dark); opacity: 0.3; pointer-events: none; }
+.page-hero-inner { position: relative; z-index: 2; }
+.page-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 800; color: var(--yellow); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+.page-eyebrow::before { content: ''; width: 20px; height: 3px; background: var(--yellow); border-radius: 2px; display: block; }
+.page-hero h1 { font-family: 'Nunito', sans-serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; color: white; line-height: 1.1; letter-spacing: -0.02em; }
+.page-hero p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 540px; line-height: 1.65; margin-top: 1rem; font-weight: 300; }
+
+/* SECTION TAG */
+.section-tag { display: inline-flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+.section-tag::before { content: ''; width: 20px; height: 3px; border-radius: 2px; background: var(--blue); display: block; }
+
+/* SECTIONS */
+.section { padding: 5rem 5vw; }
+.section.alt { background: var(--blue-bg); }
+.section h2 { font-family: 'Nunito', sans-serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: var(--blue-deep); line-height: 1.15; margin-bottom: 1.25rem; letter-spacing: -0.01em; }
+.section p { font-size: 16px; line-height: 1.75; color: var(--ink-mid); margin-bottom: 1rem; max-width: 720px; }
+
+/* BUTTONS */
+.btn-main { background: var(--blue); color: white; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; padding: 14px 28px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.15s, background 0.2s; box-shadow: 0 4px 0 var(--blue-dark); }
+.btn-main:hover { transform: translateY(-2px); background: var(--blue-dark); }
+.btn-yellow { background: var(--yellow); color: var(--ink); font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; padding: 14px 28px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.15s; box-shadow: 0 4px 0 #c8a200; }
+.btn-yellow:hover { transform: translateY(-2px); }
+.btn-white { background: white; color: var(--blue-deep); font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; padding: 14px 28px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 0 var(--blue-dark); transition: transform 0.15s; }
+.btn-white:hover { transform: translateY(-2px); }
+.btn-outline-white { background: transparent; color: white; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 700; padding: 13px 27px; border-radius: 999px; border: 2.5px solid rgba(255,255,255,0.6); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s; }
+.btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: white; }
+
+/* CARDS */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.card { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 20px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(74,159,212,0.15); }
+.card h3 { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 900; color: var(--blue-deep); margin-bottom: 0.5rem; }
+.card .card-label { font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; display: block; }
+.card p { font-size: 14.5px; line-height: 1.7; color: var(--ink-mid); }
+.card-icon { width: 48px; height: 48px; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: center; background: white; border-radius: 14px; border: 2px solid var(--blue-light); }
+
+/* CHALLENGE CARDS */
+.challenge-card { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 18px; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: transform 0.2s, box-shadow 0.2s; }
+.challenge-card:hover { transform: translateX(6px); box-shadow: -6px 0 0 var(--blue); }
+.challenge-icon { width: 46px; height: 46px; flex-shrink: 0; background: white; border-radius: 12px; border: 2px solid var(--blue-light); display: flex; align-items: center; justify-content: center; }
+.challenge-card h3 { font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; color: var(--blue-deep); margin-bottom: 4px; }
+.challenge-card p { font-size: 13.5px; color: var(--ink-mid); line-height: 1.5; }
+
+/* PROGRAM CARDS */
+.program-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+.program-card { background: white; border: 2.5px solid var(--blue-light); border-radius: 20px; padding: 2rem 1.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+.program-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--blue); }
+.program-card:nth-child(2)::before { background: var(--yellow); }
+.program-card:nth-child(3)::before { background: var(--green-accent); }
+.program-card:nth-child(4)::before { background: var(--red-accent); }
+.program-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(74,159,212,0.18); }
+.program-card-icon { width: 48px; height: 48px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; background: var(--blue-bg); border-radius: 14px; border: 2px solid var(--blue-light); }
+.program-card h3 { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; color: var(--blue-deep); margin-bottom: 0.6rem; }
+.program-card p { font-size: 13.5px; color: var(--ink-mid); line-height: 1.6; }
+
+/* ELIGIBILITY */
+.eligibility-inner { background: var(--blue-deep); border-radius: 28px; padding: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; overflow: hidden; }
+.eligibility-text h2 { font-family: 'Nunito', sans-serif; font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 900; color: white; line-height: 1.15; margin-bottom: 1.25rem; }
+.eligibility-text p { font-size: 15.5px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 2rem; }
+.eligibility-checklist { display: flex; flex-direction: column; gap: 0.9rem; }
+.check-item { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 1rem 1.25rem; }
+.check-dot { width: 28px; height: 28px; flex-shrink: 0; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.check-item span { font-family: 'Nunito', sans-serif; font-size: 14.5px; font-weight: 700; color: white; }
+
+/* RECIPIENTS */
+.recipient-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.recipient-card { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 20px; padding: 2rem; }
+.recipient-card h3 { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 900; color: var(--blue-deep); margin-bottom: 4px; }
+.recipient-year { font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; display: block; }
+.recipient-card p { font-size: 14.5px; line-height: 1.7; color: var(--ink-mid); }
+.recipient-photo { width: 100%; border-radius: 12px; margin-bottom: 1rem; object-fit: cover; max-height: 220px; }
+
+/* STATS STRIP */
+.stats-strip { background: var(--blue-deep); padding: 2.5rem 5vw; display: flex; justify-content: space-around; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.stat-item { text-align: center; }
+.stat-item-num { font-family: 'Nunito', sans-serif; font-size: 2.8rem; font-weight: 900; color: var(--yellow); line-height: 1; margin-bottom: 4px; }
+.stat-item-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.05em; max-width: 160px; line-height: 1.3; }
+.stat-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.15); }
+
+/* CTA SECTION */
+.cta-section { padding: 5rem 5vw; background: var(--blue); text-align: center; }
+.cta-section h2 { font-family: 'Nunito', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+.cta-section p { font-size: 17px; color: rgba(255,255,255,0.8); max-width: 480px; margin: 0 auto 2.25rem; line-height: 1.6; }
+.cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* TEAM */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.team-card { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 20px; padding: 2rem; text-align: center; transition: transform 0.2s; }
+.team-card:hover { transform: translateY(-4px); }
+.team-card img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 3px solid var(--blue-light); margin: 0 auto 1rem; display: block; }
+.team-card .team-avatar { width: 100px; height: 100px; border-radius: 50%; background: var(--blue-deep); border: 3px solid var(--blue-light); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family: 'Nunito', sans-serif; font-size: 2rem; font-weight: 900; color: white; }
+.team-card h3 { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 900; color: var(--blue-deep); margin-bottom: 4px; }
+.team-card .role { font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 800; color: var(--blue); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.team-card .email a { font-size: 13px; color: var(--ink-mid); text-decoration: none; }
+.team-card .email a:hover { color: var(--blue); }
+
+/* PARTNERS */
+.partner-section-header { font-family: 'Nunito', sans-serif; font-size: clamp(1.4rem, 2.5vw, 1.8rem); font-weight: 900; color: var(--blue-deep); margin-bottom: 1.5rem; }
+.partner-entry { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 18px; padding: 2rem; margin-bottom: 1.25rem; }
+.partner-entry h3 { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 900; color: var(--blue-deep); margin-bottom: 0.5rem; }
+.partner-entry p { font-size: 15px; line-height: 1.7; color: var(--ink-mid); }
+.sponsor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+.sponsor-tile { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 16px; padding: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 90px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; color: var(--blue-deep); text-align: center; transition: transform 0.2s; }
+.sponsor-tile:hover { transform: translateY(-3px); }
+
+/* CONTACT FORM */
+.contact-form { max-width: 580px; }
+.contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 13px 16px; margin-bottom: 1rem; border: 2.5px solid var(--blue-light); border-radius: 12px; font-family: 'Nunito Sans', sans-serif; font-size: 15px; color: var(--ink); background: var(--white); transition: border-color 0.2s; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--blue); }
+.contact-form textarea { min-height: 140px; resize: vertical; }
+
+/* FOOTER */
+footer { background: var(--ink); padding: 2.5rem 5vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+.footer-logo img { height: 38px; filter: brightness(0) invert(0.8); }
+.footer-info { font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.35); text-align: center; line-height: 1.7; }
+.footer-info a { color: rgba(255,255,255,0.5); text-decoration: none; }
+.footer-links { display: flex; gap: 1.25rem; list-style: none; flex-wrap: wrap; }
+.footer-links a { font-family: 'Nunito', sans-serif; font-size: 12.5px; font-weight: 700; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--blue-light); }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.fade-up { animation: fadeUp 0.6s ease both; }
+
+@media (max-width: 900px) {
+  .program-grid { grid-template-columns: repeat(2, 1fr); }
+  .eligibility-inner { grid-template-columns: 1fr; }
+  .recipient-grid { grid-template-columns: 1fr; }
+  nav .nav-links { display: none; }
+  .stat-divider { display: none; }
+}
+</style>
+</head>
+<body><nav>
+  <a href="index.html" style="display:flex;align-items:center;">
+    <img src="Big logo.png" alt="B'more Scores in STEM" class="nav-logo" style="height:48px;filter:brightness(0) invert(1);">
+  </a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="scholarship.html">Scholarship</a></li>
+<li><a href="partners.html" class="active">Partners</a></li>
+<li><a href="contribute.html" class="nav-cta">Contribute</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">Our Network</div>
+    <h1>Partners</h1>
+    <p>We're grateful to the organizations and individuals who share our mission.</p>
+  </div>
+</div>
+
+<section class="section alt">
+  <div class="section-tag">Partners in Education</div>
+  <h2>Organizations supporting our students.</h2>
+  <div style="display:flex;flex-direction:column;gap:1.25rem;margin-top:1.5rem;max-width:800px;">
+    <div class="partner-entry">
+      <h3>SOUL Programs</h3>
+      <p>SOUL Programs serves the Baltimore and Washington D.C. areas by connecting high school-aged youth who are involved in sports to diverse opportunities that build the life skills needed to succeed in academics and careers.</p>
+    </div>
+    <div class="partner-entry">
+      <h3>AND1 Tutoring</h3>
+      <p>AND1 Tutoring provides tutoring and mentorship opportunities to student-athletes in the Baltimore/Washington D.C. area.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-tag">Corporate Sponsors</div>
+  <h2>Businesses investing in Baltimore youth.</h2>
+  <div class="sponsor-grid">
+    <div class="sponsor-tile">Chipotle Mexican Grill</div>
+    <div class="sponsor-tile">Honeygrow</div>
+    <div class="sponsor-tile">Döner Bros</div>
+    <div class="sponsor-tile">THB Neighborhood Bagels &amp; Deli</div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="section-tag">Additional Partners</div>
+  <h2>Individuals who believe in our mission.</h2>
+  <div class="partner-entry" style="max-width:700px;">
+    <h3>Joseph M. Selba</h3>
+    <p>Mr. Selba is a Hopkins wrestling alum ('02) who has served as a mentor to the board of directors at B'more Scores in STEM since its conception in 2020.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Interested in partnering with us?</h2>
+  <p>Please reach out if you are interested in partnering with B'more Scores in STEM.</p>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn-white">Contact Us <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <a href="contribute.html" class="btn-outline-white">Contribute</a>
+  </div>
+</section>
+<footer>
+  <div class="footer-logo"><img src="Big logo.png" alt="B'more Scores in STEM"></div>
+  <div class="footer-info">
+    501(c)3 Nonprofit &nbsp;·&nbsp; 1 East Pratt Street, Baltimore, MD 21202<br>
+    <a href="mailto:bmorescoresinstem@gmail.com">bmorescoresinstem@gmail.com</a>
+  </div>
+  <ul class="footer-links">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</footer>
+</body>
+</html>
