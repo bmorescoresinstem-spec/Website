@@ -81,10 +81,7 @@ nav {
   margin-bottom: 1.25rem; letter-spacing: -0.02em;
 }
 .hero h1 span { color: var(--blue); position: relative; }
-.hero h1 span::after {
-  content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 4px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 8'%3E%3Cpath d='M0,4 Q7.5,0 15,4 Q22.5,8 30,4 Q37.5,0 45,4 Q52.5,8 60,4' stroke='%234a9fd4' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x center / 60px 8px;
-}
+.hero h1 span::after { content: none; }
 .hero-body { font-size: 17px; line-height: 1.7; color: var(--ink-mid); font-weight: 400; margin-bottom: 2.25rem; max-width: 480px; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 .btn-main {
@@ -313,7 +310,7 @@ footer {
       <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a5c00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
       Science · Sport · Baltimore
     </div>
-    <h1>Where Baltimore's <span>athletes</span> become tomorrow's scientists</h1>
+    <h1>Where Baltimore's student-athletes become tomorrow's <span>innovators</span></h1>
     <p class="hero-body">A scholarship and mentorship program built specifically for Baltimore City student-athletes from underserved communities — fueling STEM dreams without putting sport on pause.</p>
     <div class="hero-actions">
       <a href="scholarship.html" class="btn-main">
