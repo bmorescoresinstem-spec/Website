@@ -17,8 +17,6 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Nunito Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; margin: 0; }
 .icon { display: inline-block; vertical-align: middle; flex-shrink: 0; }
-
-/* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--blue-deep); padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; height: 70px; border-bottom: 3px solid var(--blue-dark); }
 .nav-logo img { height: 48px; display: block; filter: brightness(0) invert(1); }
 .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
@@ -26,8 +24,6 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .nav-links a:hover, .nav-links a.active { color: var(--yellow); }
 .nav-cta { background: var(--yellow) !important; color: var(--ink) !important; padding: 8px 20px; border-radius: 999px; transition: transform 0.15s, background 0.2s !important; }
 .nav-cta:hover { background: #f0b800 !important; transform: scale(1.04); }
-
-/* PAGE HERO */
 .page-hero { margin-top: 70px; background: var(--blue-deep); padding: 5rem 5vw 4rem; position: relative; overflow: hidden; }
 .page-hero::after { content: ''; position: absolute; right: -100px; top: -100px; width: 400px; height: 400px; border-radius: 50%; background: var(--blue-dark); opacity: 0.3; pointer-events: none; }
 .page-hero-inner { position: relative; z-index: 2; }
@@ -35,112 +31,43 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(
 .page-eyebrow::before { content: ''; width: 20px; height: 3px; background: var(--yellow); border-radius: 2px; display: block; }
 .page-hero h1 { font-family: 'Nunito', sans-serif; font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; color: white; line-height: 1.1; letter-spacing: -0.02em; }
 .page-hero p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 540px; line-height: 1.65; margin-top: 1rem; font-weight: 300; }
-
-/* SECTION TAG */
 .section-tag { display: inline-flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
 .section-tag::before { content: ''; width: 20px; height: 3px; border-radius: 2px; background: var(--blue); display: block; }
-
-/* SECTIONS */
 .section { padding: 5rem 5vw; }
 .section.alt { background: var(--blue-bg); }
 .section h2 { font-family: 'Nunito', sans-serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 900; color: var(--blue-deep); line-height: 1.15; margin-bottom: 1.25rem; letter-spacing: -0.01em; }
 .section p { font-size: 16px; line-height: 1.75; color: var(--ink-mid); margin-bottom: 1rem; max-width: 720px; }
-
-/* BUTTONS */
 .btn-main { background: var(--blue); color: white; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; padding: 14px 28px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.15s, background 0.2s; box-shadow: 0 4px 0 var(--blue-dark); }
 .btn-main:hover { transform: translateY(-2px); background: var(--blue-dark); }
-.btn-yellow { background: var(--yellow); color: var(--ink); font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; padding: 14px 28px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: transform 0.15s; box-shadow: 0 4px 0 #c8a200; }
-.btn-yellow:hover { transform: translateY(-2px); }
 .btn-white { background: white; color: var(--blue-deep); font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; padding: 14px 28px; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 0 var(--blue-dark); transition: transform 0.15s; }
 .btn-white:hover { transform: translateY(-2px); }
 .btn-outline-white { background: transparent; color: white; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 700; padding: 13px 27px; border-radius: 999px; border: 2.5px solid rgba(255,255,255,0.6); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s; }
 .btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: white; }
-
-/* CARDS */
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-.card { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 20px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; }
-.card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(74,159,212,0.15); }
-.card h3 { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 900; color: var(--blue-deep); margin-bottom: 0.5rem; }
-.card .card-label { font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; display: block; }
-.card p { font-size: 14.5px; line-height: 1.7; color: var(--ink-mid); }
-.card-icon { width: 48px; height: 48px; margin-bottom: 1.25rem; display: flex; align-items: center; justify-content: center; background: white; border-radius: 14px; border: 2px solid var(--blue-light); }
-
-/* CHALLENGE CARDS */
 .challenge-card { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 18px; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: transform 0.2s, box-shadow 0.2s; }
 .challenge-card:hover { transform: translateX(6px); box-shadow: -6px 0 0 var(--blue); }
 .challenge-icon { width: 46px; height: 46px; flex-shrink: 0; background: white; border-radius: 12px; border: 2px solid var(--blue-light); display: flex; align-items: center; justify-content: center; }
 .challenge-card h3 { font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; color: var(--blue-deep); margin-bottom: 4px; }
 .challenge-card p { font-size: 13.5px; color: var(--ink-mid); line-height: 1.5; }
-
-/* PROGRAM CARDS */
-.program-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
-.program-card { background: white; border: 2.5px solid var(--blue-light); border-radius: 20px; padding: 2rem 1.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
-.program-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--blue); }
-.program-card:nth-child(2)::before { background: var(--yellow); }
-.program-card:nth-child(3)::before { background: var(--green-accent); }
-.program-card:nth-child(4)::before { background: var(--red-accent); }
-.program-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(74,159,212,0.18); }
-.program-card-icon { width: 48px; height: 48px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; background: var(--blue-bg); border-radius: 14px; border: 2px solid var(--blue-light); }
-.program-card h3 { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 800; color: var(--blue-deep); margin-bottom: 0.6rem; }
-.program-card p { font-size: 13.5px; color: var(--ink-mid); line-height: 1.6; }
-
-/* ELIGIBILITY */
-.eligibility-inner { background: var(--blue-deep); border-radius: 28px; padding: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; overflow: hidden; }
-.eligibility-text h2 { font-family: 'Nunito', sans-serif; font-size: clamp(1.8rem, 2.8vw, 2.4rem); font-weight: 900; color: white; line-height: 1.15; margin-bottom: 1.25rem; }
-.eligibility-text p { font-size: 15.5px; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 2rem; }
 .eligibility-checklist { display: flex; flex-direction: column; gap: 0.9rem; }
 .check-item { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.08); border: 1.5px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 1rem 1.25rem; }
 .check-dot { width: 28px; height: 28px; flex-shrink: 0; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 .check-item span { font-family: 'Nunito', sans-serif; font-size: 14.5px; font-weight: 700; color: white; }
-
-/* RECIPIENTS */
 .recipient-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .recipient-card { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 20px; padding: 2rem; }
 .recipient-card h3 { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 900; color: var(--blue-deep); margin-bottom: 4px; }
 .recipient-year { font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; display: block; }
 .recipient-card p { font-size: 14.5px; line-height: 1.7; color: var(--ink-mid); }
+/* FIXED: uniform crop height with face-priority positioning */
 .recipient-photo { width: 100%; border-radius: 12px; margin-bottom: 1rem; object-fit: cover; height: 300px; object-position: center top; }
-
-/* STATS STRIP */
 .stats-strip { background: var(--blue-deep); padding: 2.5rem 5vw; display: flex; justify-content: space-around; align-items: center; gap: 2rem; flex-wrap: wrap; }
 .stat-item { text-align: center; }
 .stat-item-num { font-family: 'Nunito', sans-serif; font-size: 2.8rem; font-weight: 900; color: var(--yellow); line-height: 1; margin-bottom: 4px; }
 .stat-item-label { font-family: 'Nunito', sans-serif; font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.05em; max-width: 160px; line-height: 1.3; }
 .stat-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.15); }
-
-/* CTA SECTION */
 .cta-section { padding: 5rem 5vw; background: var(--blue); text-align: center; }
 .cta-section h2 { font-family: 'Nunito', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.02em; }
 .cta-section p { font-size: 17px; color: rgba(255,255,255,0.8); max-width: 480px; margin: 0 auto 2.25rem; line-height: 1.6; }
 .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-
-/* TEAM */
-.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-.team-card { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 20px; padding: 2rem; text-align: center; transition: transform 0.2s; }
-.team-card:hover { transform: translateY(-4px); }
-.team-card img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 3px solid var(--blue-light); margin: 0 auto 1rem; display: block; }
-.team-card .team-avatar { width: 100px; height: 100px; border-radius: 50%; background: var(--blue-deep); border: 3px solid var(--blue-light); margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-family: 'Nunito', sans-serif; font-size: 2rem; font-weight: 900; color: white; }
-.team-card h3 { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 900; color: var(--blue-deep); margin-bottom: 4px; }
-.team-card .role { font-family: 'Nunito', sans-serif; font-size: 11px; font-weight: 800; color: var(--blue); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
-.team-card .email a { font-size: 13px; color: var(--ink-mid); text-decoration: none; }
-.team-card .email a:hover { color: var(--blue); }
-
-/* PARTNERS */
-.partner-section-header { font-family: 'Nunito', sans-serif; font-size: clamp(1.4rem, 2.5vw, 1.8rem); font-weight: 900; color: var(--blue-deep); margin-bottom: 1.5rem; }
-.partner-entry { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 18px; padding: 2rem; margin-bottom: 1.25rem; }
-.partner-entry h3 { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 900; color: var(--blue-deep); margin-bottom: 0.5rem; }
-.partner-entry p { font-size: 15px; line-height: 1.7; color: var(--ink-mid); }
-.sponsor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
-.sponsor-tile { background: var(--blue-bg); border: 2.5px solid var(--blue-light); border-radius: 16px; padding: 1.5rem; display: flex; align-items: center; justify-content: center; min-height: 90px; font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 800; color: var(--blue-deep); text-align: center; transition: transform 0.2s; }
-.sponsor-tile:hover { transform: translateY(-3px); }
-
-/* CONTACT FORM */
-.contact-form { max-width: 580px; }
-.contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 13px 16px; margin-bottom: 1rem; border: 2.5px solid var(--blue-light); border-radius: 12px; font-family: 'Nunito Sans', sans-serif; font-size: 15px; color: var(--ink); background: var(--white); transition: border-color 0.2s; }
-.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--blue); }
-.contact-form textarea { min-height: 140px; resize: vertical; }
-
-/* FOOTER */
 footer { background: var(--ink); padding: 2.5rem 5vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
 .footer-logo img { height: 38px; filter: brightness(0) invert(0.8); }
 .footer-info { font-family: 'Nunito', sans-serif; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.35); text-align: center; line-height: 1.7; }
@@ -148,13 +75,7 @@ footer { background: var(--ink); padding: 2.5rem 5vw; display: flex; justify-con
 .footer-links { display: flex; gap: 1.25rem; list-style: none; flex-wrap: wrap; }
 .footer-links a { font-family: 'Nunito', sans-serif; font-size: 12.5px; font-weight: 700; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--blue-light); }
-
-@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-.fade-up { animation: fadeUp 0.6s ease both; }
-
 @media (max-width: 900px) {
-  .program-grid { grid-template-columns: repeat(2, 1fr); }
-  .eligibility-inner { grid-template-columns: 1fr; }
   .recipient-grid { grid-template-columns: 1fr; }
   nav .nav-links { display: none; }
   .stat-divider { display: none; }
@@ -163,7 +84,7 @@ footer { background: var(--ink); padding: 2.5rem 5vw; display: flex; justify-con
 </head>
 <body><nav>
   <a href="index.html" style="display:flex;align-items:center;">
-    <img src="Big logo.png" alt="B'more Scores in STEM" class="nav-logo" style="height:48px;filter:brightness(0) invert(1);">
+    <img src="BmoreScoresLogo.png" alt="B'more Scores in STEM" class="nav-logo" style="height:48px;filter:brightness(0) invert(1);">
   </a>
   <ul class="nav-links"><li><a href="index.html">Home</a></li>
 <li><a href="about.html">About Us</a></li>
@@ -207,7 +128,7 @@ footer { background: var(--ink); padding: 2.5rem 5vw; display: flex; justify-con
   <div class="section-tag">Apply Now</div>
   <h2>Applications are open for 2026.</h2>
   <p>Baltimore Scores in STEM provides scholarship awards of $2,000* ($500 per year), in addition to ongoing mentorship, to one student each year to offset the expenses that student faces in pursuing their education in STEM.</p>
-  <p>Please download the application form below, fill it out, and email it with your resume and high school transcript with the subject <strong>"2026 Scholarship Application - Your Name"</strong> to <a href="/cdn-cgi/l/email-protection#b9dbd4d6cbdccadad6cbdccad0d7cacddcd4f9ded4d8d0d597dad6d4" style="color:var(--blue);"><span class="__cf_email__" data-cfemail="95f7f8fae7f0e6f6fae7f0e6fcfbe6e1f0f8d5f2f8f4fcf9bbf6faf8">[email&#160;protected]</span></a>.</p>
+  <p>Please download the application form below, fill it out, and email it with your resume and high school transcript with the subject <strong>"2026 Scholarship Application - Your Name"</strong> to <a href="mailto:bmorescoresinstem@gmail.com" style="color:var(--blue);">bmorescoresinstem@gmail.com</a>.</p>
   <p style="font-size:14px;color:var(--ink-light);">*Award recipient will receive $500 per year for 4 years, contingent on maintaining a 3.0 GPA, pursuing a STEM degree, and remaining in good standing with their institution. Deadline: May 31, 2026. Recipient announced June 2026.</p>
   <a href="Application_Form_2026.docx" class="btn-main" style="margin-top:1rem;" download>
     <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -280,25 +201,25 @@ footer { background: var(--ink); padding: 2.5rem 5vw; display: flex; justify-con
       <img src="jaron.jpeg" alt="Jaron Harris" class="recipient-photo" onerror="this.style.display='none'">
       <span class="recipient-year">2025 Recipient</span>
       <h3>Jaron Harris</h3>
-      <p>Jaron is studying neuroscience at the University of Maryland. Football shaped much of his early life, from six years of youth league play to competing at Nationals as a defensive end. Growing up in Cherry Hill, he committed himself to expanding youth programming and mental health resources, creating Cortado — a virtual community of more than 8,000 members — during the pandemic. As a RAMP scholar at the University of Maryland School of Medicine, he conducted research on genetic determinants of cellular aggregation. He aims to become a physician-scientist who deepens our understanding of the brain and supports youth in under-resourced communities.</p>
+      <p>Jaron is studying neuroscience at the University of Maryland with the support of our scholarship. Football shaped much of his early life, beginning with Sunday evenings at his grandmother's house and continuing into six years of youth league play. As a defensive end and outside linebacker, he learned how to "adjust in real time," skills that helped his team finish 4th at Nationals and taught him the value of versatility, teamwork, and leadership. Growing up in Cherry Hill, Jaron saw firsthand how "struggle became a normalized part of our residents' lives," which strengthened his commitment to expanding youth programming and mental health resources. During the pandemic, he created Cortado, a virtual community of more than 8,000 members, giving isolated youth a place to connect. As a RAMP scholar at the University of Maryland School of Medicine, Jaron conducted research on the genetic determinants of cellular aggregation and examined how classroom noise influences stress during problem solving. He aims to become a physician-scientist who deepens our understanding of the brain and supports youth in under-resourced communities.</p>
     </div>
     <div class="recipient-card">
       <img src="william.jpeg" alt="William Allen" class="recipient-photo" onerror="this.style.display='none'">
       <span class="recipient-year">2025 Recipient</span>
       <h3>William Allen</h3>
-      <p>William is beginning his freshman year at the University of Richmond, pursuing a path that bridges medicine and biomedical engineering. From hands-on research in the Hur Microfluidics Lab at Johns Hopkins — where he contributed to a published study — to shadowing physicians and volunteering at Johns Hopkins Hospital, William has consistently sought opportunities to grow. A lifelong swimmer, he credits the sport with teaching him consistency, teamwork, and resilience.</p>
+      <p>William is beginning his freshman year at the University of Richmond with the support of our scholarship. He plans to pursue a path that bridges medicine and biomedical engineering, building on experiences that sparked his passion for STEM. From afternoons spent reading Science News magazines to hands-on research in the Hur Microfluidics Lab at Johns Hopkins, where he contributed to a published study, William has consistently sought out opportunities to learn and grow. He has also shadowed physicians, volunteered at Johns Hopkins Hospital, and taken on leadership roles in his school's Science Olympiad and chess teams. A lifelong swimmer, he credits the sport with teaching him the importance of consistency, teamwork, and resilience.</p>
     </div>
     <div class="recipient-card">
       <img src="Ashton.jpg" alt="Ashton Mayeux" class="recipient-photo" onerror="this.style.display='none'">
       <span class="recipient-year">2023 Recipient</span>
       <h3>Ashton Mayeux</h3>
-      <p>Ashton is studying cybersecurity and statistics at Bowie State University. He continues his lifelong enjoyment of studying mathematics and is interested in learning how he can contribute to technology development. Ashton was involved in numerous sports growing up, where he notes that "with each sport, there was something unique that [he] learned that helped [him] grow as a person."</p>
+      <p>Ashton is studying cybersecurity and statistics at Bowie State University with the support of our scholarship. He continues his lifelong enjoyment of studying mathematics and is interested in learning how he can contribute to technology development. Ashton was involved in numerous sports growing up, where he notes that "with each sport, there was something unique that [he] learned that helped [him] grow as a person." We look forward to seeing Ashton continue to develop his skills in mathematics and technology, and we are excited to hear about the amazing innovations he inspires.</p>
     </div>
     <div class="recipient-card">
       <img src="Akil.png" alt="Akil Smith" class="recipient-photo" onerror="this.style.display='none'">
       <span class="recipient-year">2022 Recipient</span>
       <h3>Akil Smith</h3>
-      <p>Akil is studying marine biology at the University of Miami. His interest developed through work at the National Aquarium in Baltimore. He aspires to further our understanding of ocean life and inspire greater representation of Black males in STEM fields. Akil attributes athletics to gaining "leadership, vision, creating goals, knowing when to react, and calling the right plays."</p>
+      <p>Akil is studying marine biology at the University of Miami with the support of our scholarship. His interest in studying marine life developed through his work experience at the National Aquarium in Baltimore, and he aspires to not only further our understanding of ocean life but also to inspire greater representation of black males in STEM fields. Akil attributes his involvement in athletics to gaining lifelong skills including "leadership, vision, creating goals, knowing when to react, and calling the right plays." We are excited to watch Akil continue his exceptional devotion to academics, athletics, and leadership in the future.</p>
     </div>
   </div>
 </section>
@@ -312,7 +233,16 @@ footer { background: var(--ink); padding: 2.5rem 5vw; display: flex; justify-con
   </div>
 </section>
 <footer>
-  <div class="footer-logo"><img src="Big logo.png" alt="B'more Scores in STEM"></div>
+  <div class="footer-logo"><img src="BmoreScoresLogo.png" alt="B'more Scores in STEM"></div>
   <div class="footer-info">
     501(c)3 Nonprofit &nbsp;·&nbsp; 1 East Pratt Street, Baltimore, MD 21202<br>
-    <a href="/cdn-cgi/l/email-protection#4426292b362137272b3621372d2a37302129042329252d286a272b29"><span class="__cf_email__" data-cfemail="88eae5e7
+    <a href="mailto:bmorescoresinstem@gmail.com">bmorescoresinstem@gmail.com</a>
+  </div>
+  <ul class="footer-links">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</footer>
+</body>
+</html>
